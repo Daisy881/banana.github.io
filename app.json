@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mine/mine",
+    "pages/logs/logs",
+    "pages/square/square"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#1296db",
+    "navigationBarTitleText": "香蕉小主",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/tabBar/firstPage.png",
+      "selectedIconPath": "images/tabBar/firstPage_s.png"
+    }, {
+      "pagePath": "pages/square/square",
+      "text": "广场",
+      "iconPath": "images/tabBar/square.png",
+      "selectedIconPath": "images/tabBar/square_s.png"
+    }, {
+      "pagePath": "pages/mine/mine",
+      "text": "我的",
+      "iconPath": "images/tabBar/mine.png",
+      "selectedIconPath": "images/tabBar/mine_s.png"
+    }]
+  },
+  "sitemapLocation": "sitemap.json"
+}

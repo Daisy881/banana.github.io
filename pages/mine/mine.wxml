@@ -1,0 +1,58 @@
+<view class="container">
+  <view class="container_mine" wx:if="{{loginFlag}}">
+    <view class="login_app">
+      <image src="../../images/banana.jpg" style="width: 200rpx; height: 200rpx; position: relative; top: -80rpx;"></image>
+    </view>
+    <view class="input_box">
+      <input type="text" bindinput="bindAccountInput" placeholder="账号" auto-focus="true"/>
+    </view>
+    <view class="input_box">
+      <input type="password" bindinput="bindPasswordInput" placeholder="密码"/>
+    </view>
+    <view class="login_box">
+      <button type="primary" bindtap="login">登录</button>
+    </view>
+    <view class="bottoom_box">
+      <view class="res_box" bindtap="register">注册</view>
+      <view class="forget_box" bindtap="forgetPsd">忘记密码</view>
+    </view>
+  </view>
+  <view class="container_mineCom" wx:else>
+    <!-- 用户信息 -->
+    <view class="header_box" bindtap="editMessage">
+      <image src="{{headPortrait}}" class="headPic"></image>
+      <view>{{userName}}</view>
+    </view>
+    <!-- 部落格 -->
+    <view class="med_box" style="height: 200rpx;">
+      <view class="font_top">部落格</view>
+      <view class="tribe_content">
+        <view class="three_tribe" bindtap="intoSpace">
+          <i class="iconfont icon-qqkongjian"></i>进空间
+        </view>
+        <view class="three_tribe" bindtap="editNotes">
+          <i class="iconfont icon-shuxie"></i>写游记
+        </view>
+        <view class="three_tribe" bindtap="drafts">
+          <i class="iconfont icon-caogaoxiang"></i>草稿箱
+        </view>
+      </view>
+    </view>
+    <!-- 收藏夹 -->
+    <view class="med_box" style="margin-bottom: 30rpx;">
+      <view class="font_top">收藏夹</view>
+      <scroll-view scroll-y class="collect_content">
+        <view wx:for="{{collectList}}" wx:key="index" class="collect_for">
+          <image src="{{item.collectPic}}" style="width: 200rpx;height: 200rpx;"/>
+          <view class="for_describe">
+            <view>{{item.collectName}}</view>
+            <view class="collect_place">
+              <i class="iconfont icon-weizhi" style="font-size: 14px;"></i>{{item.collectPlace}}</view>
+            <view class="collect_time">收藏于{{item.collectTime}}</view>
+          </view>
+        </view>
+        <view class="collect_bottom">小主就只收藏这么些个地方啦~.~</view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

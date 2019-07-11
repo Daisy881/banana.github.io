@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="container">
+<!-- 目的地和搜索框 -->
+  <view class="destination_search">
+    <view class="destination" bindtap="choosePlace">
+      深圳<view class="down_arrow"></view>
+    </view>
+    <view class="search" bindtap="searchTo">
+      <image src="../../images/index/search.jpg" class="search_img"></image>
+    </view>
+  </view>
+</view>
+
+<!-- 导航栏 -->
+<view class="container_nav">
+  
+</view>

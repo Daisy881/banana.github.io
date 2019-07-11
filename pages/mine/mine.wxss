@@ -1,0 +1,129 @@
+@import '../../images/icons/iconfontTribe.wxss';
+
+.container_mine {
+  width: 94%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f6f6f6;
+}
+.input_box {
+  width: 90%;
+  height: 60rpx;
+  padding: 20rpx 20rpx;
+  border: 3rpx solid black;
+  margin: 10rpx auto;
+}
+.login_box {
+  width: 93%;
+  padding: -10rpx;
+  margin-top: 100rpx;
+}
+.bottoom_box {
+  color: #1296db;
+  font-size: 14px;
+  margin: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+.res_box {
+  position: relative;
+  left: -220rpx;
+}
+.forget_box {
+  position: relative;
+  left: 220rpx;
+}
+.container_mineCom {
+  width: 94%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.header_box {
+  height: 200rpx;
+  padding: 20rpx;
+  margin-top: 20rpx;
+  font-size: 22px;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px #cdcdcd;
+}
+.headPic {
+  width: 180rpx;
+  height: 180rpx;
+  margin-right: 20rpx;
+  border-radius: 40px;
+}
+.med_box {
+  height: 600rpx;
+  margin-top: 40rpx;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px #cdcdcd;
+}
+.font_top {
+  padding-left: 25rpx;
+  line-height: 30px;
+  font-size: 20px;
+  color: #1296db;
+  border-bottom: 1px solid #cdcdcd;
+}
+.tribe_content {
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-around;
+  align-items: center;
+}
+.three_tribe {
+  display: flex; 
+  flex-direction: column;
+  font-size: 14px;
+}
+.three_tribe i {
+  position: relative;
+  left: 25rpx;
+}
+.collect_content {
+  margin-top: 10rpx;
+  margin-left: 5rpx;
+  height: 220px;
+}
+.collect_for {
+  height: 100px;
+  margin-top: 10rpx;
+  border-bottom: 1px solid #f0f0f0; 
+  display: flex; 
+  flex-direction: row;
+}
+.for_describe {
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+.collect_place {
+  font-size: 12px; 
+  position: relative;
+  top: 110rpx;
+}
+.collect_time {
+  font-size: 12px; 
+  color: #cdcdcd;
+  position: relative;
+  top: 72rpx;
+  left: 220rpx;
+}
+.collect_bottom {
+  margin: 30rpx auto;
+  color: #cdcdcd;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+}
