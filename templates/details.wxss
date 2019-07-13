@@ -1,0 +1,45 @@
+.detailsTem_container {
+  width: 340rpx;
+  height: 320rpx;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40rpx;
+}
+.details_pic {
+  width: 340rpx;
+  height: 320rpx;
+  border-radius: 5px;
+}
+.details_name {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 80rpx;
+}
+.details_desc {
+  font-size: 12px;
+  color: #cdcdcd;
+}
+.strategys_container {
+  display: flex;
+  padding-bottom: 10rpx;
+  margin-top: 20rpx;
+}
+.strategys_pic {
+  width: 300rpx;
+  height: 180rpx;
+  border-radius: 5px;
+  margin-right: 20rpx;
+}
+.strategys_name {
+  width: 450rpx;
+  font-weight: bold;
+}
+.str_username {
+  color: #aaaaaa;
+  font-size: 12px;
+}
+.strategys_desc {
+  margin-top: 40rpx;
+  color: #cdcdcd;
+  font-size: 12px;
+}

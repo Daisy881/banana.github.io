@@ -63,7 +63,7 @@
   border-radius: 40px;
 }
 .med_box {
-  height: 600rpx;
+  height: 650rpx;
   margin-top: 40rpx;
   border-radius: 5px;
   box-shadow: 1px 1px 2px #cdcdcd;
@@ -94,10 +94,10 @@
 .collect_content {
   margin-top: 10rpx;
   margin-left: 5rpx;
-  height: 220px;
+  height: 570rpx;
 }
 .collect_for {
-  height: 100px;
+  height: 200rpx;
   margin-top: 10rpx;
   border-bottom: 1px solid #f0f0f0; 
   display: flex; 
@@ -117,7 +117,7 @@
   font-size: 12px; 
   color: #cdcdcd;
   position: relative;
-  top: 72rpx;
+  top: 75rpx;
   left: 220rpx;
 }
 .collect_bottom {

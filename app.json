@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/square/square",
     "pages/index/index",
     "pages/mine/mine",
-    "pages/logs/logs",
-    "pages/square/square"
+    "pages/logs/logs"
   ],
   "window": {
     "navigationBarBackgroundColor": "#1296db",
@@ -11,6 +11,7 @@
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
+    "selectedColor": "#1296db", 
     "list": [{
       "pagePath": "pages/index/index",
       "text": "首页",

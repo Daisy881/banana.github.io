@@ -1,3 +1,27 @@
-<view>
-  <view>{{msg}}</view>
+<import src="../../templates/square.wxml"/>
+
+<view class="container">
+  <!-- 搜索框 -->
+  <view class="search" bindtap="searchTo">
+    <image src="../../images/index/search.jpg" class="search_img"></image>
+    <view class="square_nav">
+      <text class="item {{currentTab == index ? 'active' : ''}}" wx:for="{{squareNav}}" wx:key="*this" data-idx="{{index}}" bindtap="squareTap">{{item}}</text>
+    </view>
+  </view>
+
+  <!-- 列表 -->
+  <view class="square_list">
+    <!-- 推荐 -->
+    <block wx:if="{{squareFlag == 0}}">
+      <view class="list_content" wx:for="{{squareList}}" wx:key="*this">
+        <template is="square" data="{{...item}}"></template>
+      </view>
+    </block>
+    <!-- 附近 -->
+    <block wx:else>
+      <view class="list_content" wx:for="{{nearbyList}}" wx:key="*this">
+        <template is="square" data="{{...item}}"></template>
+      </view>
+    </block>
+  </view>
 </view>

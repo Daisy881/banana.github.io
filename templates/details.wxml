@@ -1,0 +1,19 @@
+<template name="details">
+  <view class="detailsTem_container">
+    <image src="{{detailsPic}}" class="details_pic"></image>
+    <view class="details_name">{{detailsName}}</view>
+    <view class="details_desc">{{detailsPeople}}人体验过</view>
+  </view>
+</template>
+
+<template name="strategys">
+  <view class="strategys_container">
+    <image src="{{strategysPic}}" class="strategys_pic"></image>
+    <view style="display: flex; flex-direction: column; padding-bottom: 20rpx;border-bottom: 1px solid #cdcdcd;">
+      <view class="strategys_name">{{strategysName}}</view>
+      <view>{{userHead}}</view>
+      <view class="str_username">{{username}}</view>
+      <view class="strategys_desc">{{strategysPeople}}浏览</view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,27 @@
+<template name="square">
+  <view style="margin: 25rpx 40rpx;">
+    <image class="s_userhead" src="{{userhead}}"/>
+    <view class="username_time">
+      <text>{{username}}</text>
+      <text class="data_time">{{dataTime}}</text>
+    </view>
+    <view class="article_content">{{articleContent}}</view>
+    <view style="display: flex; flex-direction: row; justify-content: space-around;">
+      <block wx:for="{{picList}}" wx:key="*this">
+        <image src="{{item}}" class="pic_video"/>
+      </block>
+    </view>
+    <text class="{{place ? 's_place' : ''}}" >{{place}}</text>
+    <view class="s_place" style="float: right; background: white;" wx:if="{{distance}}">
+      <i class="iconfont icon-weizhi" style="font-size: 10px;"></i>
+      距你{{distance}}千米
+    </view>
+    <view class="{{distance ? 'nearby_bottom' : 's_bottom'}}">
+      <i class="iconfont icon-aixin" style="font-size: 20px;" bindtap="praiseTap"></i>
+      <text class="s_praise">{{praise}}</text>
+      <i class="iconfont icon-pinglun" style="font-size: 20px;"bindtap="commentTap"></i>
+      <text class="s_comment">{{comment}}</text>
+      <i class="iconfont icon-fenxiang" style="font-size: 20px;" bindtap="shareTap"></i>
+    </view>
+  </view>
+</template>

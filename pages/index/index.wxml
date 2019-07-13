@@ -1,4 +1,5 @@
-<!--index.wxml-->
+<import src="../../templates/details.wxml"/>
+
 <view class="container">
 <!-- 目的地和搜索框 -->
   <view class="destination_search">
@@ -9,9 +10,64 @@
       <image src="../../images/index/search.jpg" class="search_img"></image>
     </view>
   </view>
+
+  <view class="navbar">
+    <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+  </view>  
+
+  <!-- 导航栏 -->
+  <view class="place_container">
+    <!-- 必体验 -->
+    <view wx:if="{{navFlag == '0'}}">
+      <!-- 导航详情 -->
+      <view class="classify_content">
+        <text wx:for="{{classifyList}}" data-idx="{{index}}" class="{{currentCsf == index ? 'active' : ''}}" wx:key="*this" bindtap="classifyTap">{{item}}</text>
+      </view>
+      <!-- 景点 -->
+      <view class="enjoy_box" wx:if="{{classifyFlag == '0'}}">
+        <block wx:for="{{spotsList}}" wx:key="*this">
+          <template is="details" data="{{...item}}"/>
+        </block>
+      </view>
+      <!-- 看海 -->
+      <view class="enjoy_box" wx:elif="{{classifyFlag == '1'}}">
+        <block wx:for="{{seaList}}" wx:key="*this">
+          <template is="details" data="{{...item}}"/>
+        </block>
+      </view>
+      <!-- 徒步登山 -->
+      <view class="enjoy_box" wx:elif="{{classifyFlag == '2'}}">
+        <block wx:for="{{mountainsList}}" wx:key="*this">
+          <template is="details" data="{{...item}}"/>
+        </block>
+      </view>
+      <!-- 游乐园 -->
+      <view class="enjoy_box" wx:elif="{{classifyFlag == '3'}}">
+        <block wx:for="{{playList}}" wx:key="*this">
+          <template is="details" data="{{...item}}"/>
+        </block>
+      </view>
+      <!-- 乡村 -->
+      <view class="enjoy_box" wx:elif="{{classifyFlag == '4'}}">
+        <block wx:for="{{countryList}}" wx:key="*this">
+          <template is="details" data="{{...item}}"/>
+        </block>
+      </view>
+      <!-- 历史 -->
+      <view class="enjoy_box" wx:else>
+        <block wx:for="{{historyList}}" wx:key="*this">
+          <template is="details" data="{{...item}}"/>
+        </block>
+      </view>
+    </view>
+
+    <!-- 攻略 -->
+    <view wx:elif="{{navFlag == '1'}}">
+      <block wx:for="{{strategysList}}" wx:key="*this">
+        <template is="strategys" data="{{...item}}"></template>
+      </block>
+    </view>
+  </view>
 </view>
 
-<!-- 导航栏 -->
-<view class="container_nav">
-  
-</view>
+

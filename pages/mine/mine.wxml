@@ -34,12 +34,12 @@
           <i class="iconfont icon-shuxie"></i>写游记
         </view>
         <view class="three_tribe" bindtap="drafts">
-          <i class="iconfont icon-caogaoxiang"></i>草稿箱
+          <i class="iconfont icon-caogaoxiang"></i>收藏夹
         </view>
       </view>
     </view>
     <!-- 收藏夹 -->
-    <view class="med_box" style="margin-bottom: 30rpx;">
+    <view class="med_box">
       <view class="font_top">收藏夹</view>
       <scroll-view scroll-y class="collect_content">
         <view wx:for="{{collectList}}" wx:key="index" class="collect_for">
