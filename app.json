@@ -1,9 +1,11 @@
 {
   "pages": [
-    "pages/square/square",
     "pages/index/index",
     "pages/mine/mine",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/square/square",
+    "pages/mustgo/mustgo",
+    "pages/strategy/strategy"
   ],
   "window": {
     "navigationBarBackgroundColor": "#1296db",

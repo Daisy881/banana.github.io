@@ -1,0 +1,30 @@
+<view class="pic_box">
+  <image src="{{strategyList.strategysPic}}" class="strategy_pic"></image>
+</view>
+
+<view class="strategy_container">
+  <view class="content_container">
+    <view class="app_title">
+      <image src="../../images/banana.jpg"/>
+      <text>香蕉·攻略</text>
+    </view>
+    <view class="str_title">{{strategyList.strategysName}}</view>
+    <view class="title_bottom">
+      <text>发表于{{strategyList.issueTime}} · </text>
+      <text>{{strategyList.scanPeople}}浏览</text>
+    </view>
+    <view class="user_box">
+      <image src="{{strategyList.userHead}}" />
+      <text class="str_name">{{strategyList.username}}</text>
+      <i class="iconfont icon-weizhi" style="font-size: 34rpx;margin-right: -130rpx; margin-top: 15rpx;"></i>
+      <text>{{strategyList.place}}<text class="arrow_right"></text></text>
+    </view>
+    <view style="font-size: 38rpx;">
+      <view class="{{contentFlag ? 'part_article' : 'all_article'}}">{{strategyList.strContent}}</view>
+    </view>
+    <view class="content_bottom">
+      <text class="click_article" wx:if="{{contentFlag}}" bindtap="unfold">点击展开全文<text class="arrow_down"></text></text>
+      <text class="none_article" wx:else>- END -</text>
+    </view>
+  </view>
+</view>

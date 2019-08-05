@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    loginFlag: false,
+    loginFlag: true,
     account: '',
     password: '',
     headPortrait: '../../images/banana.jpg',

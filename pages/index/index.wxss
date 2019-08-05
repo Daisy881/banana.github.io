@@ -35,6 +35,7 @@
 }  
 .navbar .item{  
   width: 100rpx;
+  height: 50rpx;
   text-align: center;  
   line-height: 80rpx;  
   font-size: 34rpx;

@@ -144,5 +144,22 @@ Page({
       currentCsf: e.currentTarget.dataset.idx,
       classifyFlag: e.currentTarget.dataset.idx
     })
+  },
+  goDetail: function(e) {
+    wx.navigateTo({
+      url: '../mustgo/mustgo',
+      success: function(res) {
+        // 通过eventChannel向被打开的页面传送数据
+        res.eventChannel.emit('acceptData', {data: e.currentTarget.dataset.idx})
+      } 
+    })
+  },
+  strDetail: function(e) {
+    wx.navigateTo({
+      url: '../strategy/strategy',
+      success: function(res) {
+        res.eventChannel.emit('acceptStrData', {data: e.currentTarget.dataset.idx})
+      }
+    })
   }
 })

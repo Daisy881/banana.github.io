@@ -25,47 +25,47 @@
       </view>
       <!-- 景点 -->
       <view class="enjoy_box" wx:if="{{classifyFlag == '0'}}">
-        <block wx:for="{{spotsList}}" wx:key="*this">
+        <view wx:for="{{spotsList}}" wx:key="*this" data-idx="{{index}}" bindtap="goDetail">
           <template is="details" data="{{...item}}"/>
-        </block>
+        </view>
       </view>
       <!-- 看海 -->
       <view class="enjoy_box" wx:elif="{{classifyFlag == '1'}}">
-        <block wx:for="{{seaList}}" wx:key="*this">
+        <view wx:for="{{seaList}}" wx:key="*this" data-idx="{{index}}" bindtap="goDetail">
           <template is="details" data="{{...item}}"/>
-        </block>
+        </view>
       </view>
       <!-- 徒步登山 -->
       <view class="enjoy_box" wx:elif="{{classifyFlag == '2'}}">
-        <block wx:for="{{mountainsList}}" wx:key="*this">
+        <view wx:for="{{mountainsList}}" wx:key="*this" data-idx="{{index}}" bindtap="goDetail">
           <template is="details" data="{{...item}}"/>
-        </block>
+        </view>
       </view>
       <!-- 游乐园 -->
       <view class="enjoy_box" wx:elif="{{classifyFlag == '3'}}">
-        <block wx:for="{{playList}}" wx:key="*this">
+        <view wx:for="{{playList}}" wx:key="*this" data-idx="{{index}}" bindtap="goDetail">
           <template is="details" data="{{...item}}"/>
-        </block>
+        </view>
       </view>
       <!-- 乡村 -->
       <view class="enjoy_box" wx:elif="{{classifyFlag == '4'}}">
-        <block wx:for="{{countryList}}" wx:key="*this">
+        <view wx:for="{{countryList}}" wx:key="*this" data-idx="{{index}}" bindtap="goDetail">
           <template is="details" data="{{...item}}"/>
-        </block>
+        </view>
       </view>
       <!-- 历史 -->
       <view class="enjoy_box" wx:else>
-        <block wx:for="{{historyList}}" wx:key="*this">
+        <view wx:for="{{historyList}}" wx:key="*this" data-idx="{{index}}" bindtap="goDetail">
           <template is="details" data="{{...item}}"/>
-        </block>
+        </view>
       </view>
     </view>
 
     <!-- 攻略 -->
     <view wx:elif="{{navFlag == '1'}}">
-      <block wx:for="{{strategysList}}" wx:key="*this">
+      <view wx:for="{{strategysList}}" wx:key="*this" data-idx="{{index}}" bindtap="strDetail">
         <template is="strategys" data="{{...item}}"></template>
-      </block>
+      </view>
     </view>
   </view>
 </view>

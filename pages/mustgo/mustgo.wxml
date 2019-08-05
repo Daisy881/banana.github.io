@@ -1,0 +1,64 @@
+<view class="mustgo_container">
+  <view class="mustgo_content">
+    <view class="place_classify">
+      <text>{{indexDetails.place}} · </text>
+      <text>{{indexDetails.classify}}</text>
+    </view>
+    <view style="font-weight: bold;">{{indexDetails.title}}</view>
+    <view class="detail_label">
+      <block wx:for="{{indexDetails.labels}}" wx:key="*this">
+        <text>{{item}}</text>
+      </block>
+    </view>
+    <text class="people_place">{{indexDetails.people}}人在当地</text>
+    <scroll-view scroll-x>
+      <view class="people_pic">
+        <view wx:for="{{indexDetails.userpics}}" wx:key="*this">
+          <image src="{{item}}"/>
+        </view>
+      </view>
+    </scroll-view>
+    <view class="hot_strbox">
+      <text style="font-weight: bold;">热门攻略</text>
+      <view class="hot_content">
+        <block wx:for="{{indexDetails.hotStrategy}}" wx:key="*this">
+          <view class="font_box">
+            <view class="font_content">{{item.content}}</view>
+            <text class="font_scan">{{item.scan}}浏览</text>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class="place_detail">
+      <view style="font-weight: bold; font-size: 38rpx;">{{indexDetails.classify}}详情</view>
+      <i class="iconfont icon-weizhi" style="font-size: 38rpx;"></i>
+      <text class="font_weizhi">{{indexDetails.location}}</text>
+      <i class="iconfont icon-tubiao-" style="font-size: 38rpx;"></i>
+      <text style="position: relative; top: -15rpx; left: 50rpx;">开放时间</text>
+      <text class="font_introduce">{{indexDetails.openTime}}</text>
+      <i class="iconfont icon-jiaotong" style="font-size: 38rpx;"></i>
+      <text style="position: relative; top: -15rpx; left: 50rpx;">交通攻略</text>
+      <text class="font_introduce">{{indexDetails.traffic}}</text>
+      <i class="iconfont icon-menpiao" style="font-size: 38rpx;"></i>
+      <text style="position: relative; top: -15rpx; left: 50rpx;">门票攻略</text>
+      <text class="font_introduce">{{indexDetails.tickets}}</text>
+    </view>
+    <view class="xiaozhu_comment">
+      <text style="font-weight: bold; font-size: 38rpx;">小主点评</text>
+      <view class="comment_content">
+        <block wx:for="{{indexDetails.comments}}" wx:key="*this">
+          <view class="user_message">
+            <image src="{{item.userhead}}"/>
+            <text>{{item.username}}</text>
+          </view>
+          <text class="content_tip">{{item.comContent}}</text>
+          <view class="content_pic">
+            <block wx:for="{{item.contentPics}}" wx:key="*this">
+              <image src="{{item}}"/>
+            </block>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>
