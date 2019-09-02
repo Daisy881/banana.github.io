@@ -1,0 +1,31 @@
+<view class="container_mine-edit">
+  <view class="top-box">
+    <view class="mineedit-box" data-idx="0" bindtap="tapEdit">
+      <text>头像</text>
+      <view class="headPic"></view>
+      <image src="{{userInfo.avatarUrl}}" style="width: 80rpx;height: 80rpx;"/>
+    </view>
+    <view class="mineedit-box" data-idx="1" bindtap="tapEdit">
+      <text>昵称</text>
+      <view class="name-address">{{userInfo.nickName}}</view>
+      <!-- <image src="/images/index/right-arrow.png"/> -->
+    </view>
+    <!-- <view class="mineedit-box" data-idx="2" bindtap="tapEdit">
+      <text>性别</text>
+      <view class="sex">{{sex}}</view>
+      <image src="/images/index/right-arrow.png"/>
+    </view> -->
+    <view class="mineedit-box" data-idx="3" bindtap="tapEdit">
+      <text>地址</text>
+      <view class="name-address">{{userInfo.country}}  {{userInfo.city}}</view>
+      <!-- <image src="/images/index/right-arrow.png"/> -->
+    </view>
+  </view>
+  <!-- <view class="exitLog" bindtap="exitLog">退出登录</view> -->
+  <!--弹窗-->
+  <!-- <modal id="modal" hidden="{{hiddenmodalput}}" title="{{title}}" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+    <input bindinput="bindAccountInput" data-idx="0" placeholder="昵称" value="{{userInfo.nickName}}" wx:if="{{nameFlag}}"/>
+    <input bindinput="bindsexInput" data-idx="1" placeholder="性别" value="{{userInfo.sex}}" wx:if="{{sexFlag}}"/>
+    <input bindinput="bindaddressInput" data-idx="2" placeholder="地址" value="{{setaddress}}" wx:if="{{addressFlag}}"/>
+  </modal> -->
+</view>

@@ -1,28 +1,35 @@
 <view class="container">
-  <view class="container_mine" wx:if="{{loginFlag}}">
+  <!-- <view class="container_mine" wx:if="{{loginFlag}}">
     <view class="login_app">
       <image src="../../images/banana.jpg"></image>
     </view>
-    <view class="input_box">
-      <input type="text" bindinput="bindAccountInput" placeholder="账号" auto-focus="true"/>
-    </view>
-    <view class="input_box">
-      <input type="password" bindinput="bindPasswordInput" placeholder="密码"/>
-    </view>
-    <view class="login_box">
-      <button type="primary" bindtap="login">登录</button>
-    </view>
+    <form bindsubmit="submit">
+      <view class="input_box">
+        <input type="text" bindinput="bindAccountInput" placeholder="账号" auto-focus="true" value="{{username}}"/>
+      </view>
+      <view class="input_box">
+        <input type="password" bindinput="bindPasswordInput" placeholder="密码" value="{{password}}"/>
+      </view>
+      <view class="login_box">
+        <button form-type='submit' type="primary" bindtap="login" wx:if="{{regFlag}}">登录</button>
+        <button form-type='submit' type="primary" bindtap="register" wx:else>注册</button>
+      </view>
+    </form>
     <view class="bottoom_box">
-      <view class="res_box" bindtap="register">注册</view>
-      <view class="forget_box" bindtap="forgetPsd">忘记密码</view>
+      <view class="res_box" bindtap="registerFlag" wx:if="{{regFlag}}">注册</view>
+      <view class="res_box" bindtap="loginFlag" style="margin-left: -80rpx;" wx:else>登录</view>
+      <view class="forget_box" bindtap="forgetPsd" wx:if="{{regFlag}}">忘记密码</view>
     </view>
-  </view>
-  <view class="container_mineCom" wx:else>
+  </view> -->
+  <view class="container_mineCom">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <!-- 用户信息 -->
-    <view class="header_box" bindtap="editMessage">
-      <image src="{{headPortrait}}" class="headPic"></image>
-      <view>{{userName}}</view>
-    </view>
+    <block wx:else>
+      <view class="header_box" bindtap="editMessage">
+        <image src="{{userInfo.avatarUrl}}" class="headPic"></image>
+        <view>{{userInfo.nickName}}</view>
+      </view>
+    </block>
     <!-- 部落格 -->
     <view class="med_box" style="height: 200rpx;">
       <view class="font_top">部落格</view>

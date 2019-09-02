@@ -5,7 +5,8 @@
     "pages/logs/logs",
     "pages/square/square",
     "pages/mustgo/mustgo",
-    "pages/strategy/strategy"
+    "pages/strategy/strategy",
+    "pages/mine-edit/mine-edit"
   ],
   "window": {
     "navigationBarBackgroundColor": "#1296db",
