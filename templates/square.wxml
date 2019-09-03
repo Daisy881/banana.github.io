@@ -17,11 +17,16 @@
       距你{{distance}}千米
     </view>
     <view class="{{distance ? 'nearby_bottom' : 's_bottom'}}">
-      <i class="iconfont icon-aixin" style="font-size: 20px;" bindtap="praiseTap"></i>
+      <i class="iconfont icon-aixin" style="font-size: 48rpx;" catchtap="praiseTap" id="{{id}}"></i>
       <text class="s_praise">{{praise}}</text>
-      <i class="iconfont icon-pinglun" style="font-size: 20px;"bindtap="commentTap"></i>
+      <i class="iconfont icon-pinglun" style="font-size: 48rpx;"catchtap="commentTap" id="{{id}}"></i>
       <text class="s_comment">{{comment}}</text>
-      <i class="iconfont icon-fenxiang" style="font-size: 20px;" bindtap="shareTap"></i>
+      <!-- <i class="iconfont icon-fenxiang" style="font-size: 48rpx;" catchtap="shareTap" id="{{id}}"></i> -->
+    </view>
+    <!--评论-->
+    <view class="comment-input" wx:if="{{id == idx && commentFlag}}">
+      <input type="text" value="" bindinput="bindMsgInput"/>
+      <button type="primary" bindtap="sendMsg" id="{{id}}">发送</button>
     </view>
   </view>
 </template>

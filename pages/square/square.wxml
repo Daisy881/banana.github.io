@@ -14,13 +14,13 @@
     <!-- 推荐 -->
     <block wx:if="{{squareFlag == 0}}">
       <view class="list_content" wx:for="{{squareList}}" wx:key="*this">
-        <template is="square" data="{{...item}}"></template>
+        <template is="square" data="{{...item, idx, commentFlag, likeFlag}}"></template>
       </view>
     </block>
     <!-- 附近 -->
     <block wx:else>
       <view class="list_content" wx:for="{{nearbyList}}" wx:key="*this">
-        <template is="square" data="{{...item}}"></template>
+        <template is="square" data="{{...item, idx, commentFlag, likeFlag}}"></template>
       </view>
     </block>
   </view>

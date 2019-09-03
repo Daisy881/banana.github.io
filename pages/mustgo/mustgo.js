@@ -2,6 +2,7 @@ const app = getApp()
 
 Page({
   data: {
+    collectionFlag: false,
     indexDetails: {
       place: '深圳',
       classify: '景点',
@@ -36,5 +37,20 @@ Page({
     eventChannel.on('acceptData', function(data) {
       console.log(data,9999999)
     })
+  },
+  imgChange() {
+    this.setData({
+      collectionFlag: !this.data.collectionFlag
+    })
+    if(this.data.collectionFlag) {
+      wx.showToast({
+        title: "已收藏"
+      })
+    } else {
+      wx.showToast({
+        title: "取消收藏",
+        image: "/images/index/warning.png"
+      })
+    }
   }
 })

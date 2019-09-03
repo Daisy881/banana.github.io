@@ -1,3 +1,4 @@
+@import '../images/icons/shoucang.wxss';
 @import '../images/icons/square.wxss';
 @import '../images/icons/iconfontTribe.wxss';
 
@@ -62,4 +63,30 @@
   top: -20rpx;
   margin-left: 10rpx;
   margin-right: 20rpx;
+}
+.comment-input {
+  width: 100%;
+  margin-bottom: 20rpx; 
+}
+.comment-input input {
+  width: 84%;
+  line-height: 20rpx;
+  position: relative;
+  top: -10rpx;
+  padding: auto 20rpx;
+  border-radius: 10rpx;
+  border: 1px solid #cdcdcd;
+}
+.comment-input button {
+  background: #1296db;
+  width: 12%;
+  height: 54rpx;
+  font-size: 22rpx;
+  padding: 0;
+  position: absolute;
+  top: 628rpx;
+  right: 35rpx;
+}
+.comment-input button:hover {
+  background: #1296db;
 }

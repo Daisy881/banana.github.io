@@ -15,10 +15,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-aixin:before {
-  content: "\e766";
-}
-
 .icon-pinglun:before {
   content: "\e607";
 }

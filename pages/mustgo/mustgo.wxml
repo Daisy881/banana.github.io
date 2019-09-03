@@ -1,10 +1,16 @@
 <view class="mustgo_container">
   <view class="mustgo_content">
+    <view class="title-box">
+      {{indexDetails.title}}
+      <p bindtap="imgChange">
+        <image src="/images/index/collection-s.png" class="collection-img" wx:if="{{collectionFlag}}"/>
+        <image src="/images/index/collection.png" class="collection-img" wx:else/>
+      </p>
+    </view>
     <view class="place_classify">
       <text>{{indexDetails.place}} · </text>
       <text>{{indexDetails.classify}}</text>
     </view>
-    <view style="font-weight: bold;">{{indexDetails.title}}</view>
     <view class="detail_label">
       <block wx:for="{{indexDetails.labels}}" wx:key="*this">
         <text>{{item}}</text>
