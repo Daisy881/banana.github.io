@@ -138,7 +138,7 @@ Page({
     }
   },
   // 分享
-  //shareTap: function() {
-    //console.log("分享...")
-  //}
+  shareTap: function() {
+    console.log("分享...")
+  }
 })

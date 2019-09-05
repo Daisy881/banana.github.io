@@ -70,6 +70,7 @@
 }
 .comment-input input {
   width: 84%;
+  height: 55rpx;
   line-height: 20rpx;
   position: relative;
   top: -10rpx;

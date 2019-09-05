@@ -1,3 +1,4 @@
+@import '../../images/icons/shoucang.wxss';
 @import '../../images/icons/iconfontTribe.wxss';
 
 .container_mine {

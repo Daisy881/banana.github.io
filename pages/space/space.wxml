@@ -1,0 +1,48 @@
+<view class="space-container" style="position: {{nodesListFlag? 'fixed':''}}">
+  <view class="background-box" bindtap="changeBackPic">
+    <image src="/images/index/space.jpg" />
+  </view>
+  <view class="space-content">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <view class="space-user">
+        <image src="{{userInfo.avatarUrl}}" />
+        <text>{{userInfo.nickName}}</text>
+      </view>
+    </block>
+  </view>
+  <view class="space-content">
+    <view class="none-content" wx:if="{{nodesListFlag}}">小主的空间空空如也，<span style="color: #1296db;" bindtap="clickMe">点我</span>来编写第一条游记吧~.~</view>
+    <view class="nodes-content" wx:else>
+      <view class="node-content" wx:for="{{nodesList}}" wx:key="*this" data-idx="{{index}}">
+        <view class="node-topbox">
+          <image src="{{userInfo.avatarUrl}}" />
+          <text>{{userInfo.nickName}}
+            <text>{{item.sendTime}}</text>
+          </text>
+        </view>
+        <view class="one-node">{{item.content}}</view>
+        <view class="content-img">
+          <view wx:for="{{item.picList}}" wx:for-item="dImg" wx:key="*this" data-idx="{{index}}" data-list="{{item.picList}}" catchtap="getImg">
+            <image src="{{dImg}}" class="pic_video" style="width: 230rpx; margin-right: 5rpx; margin-top:5rpx;"/>
+          </view>
+          <text class="" wx:if="{{picListAfterFlag}}"></text>
+        </view>
+        <text class="{{item.place ? 's_place' : ''}}" >{{item.place}}</text>
+        <view class="nearby_bottom" style="margin-top: 20rpx; margin-bottom: 20rpx;">
+          <i class="iconfont icon-aixin" style="font-size: 48rpx;" catchtap="praiseTap" id="{{item.id}}"></i>
+          <text class="s_praise">{{item.praise}}</text>
+          <i class="iconfont icon-pinglun" style="font-size: 48rpx;"catchtap="commentTap" id="{{item.id}}"></i>
+          <text class="s_comment">{{item.comment}}</text>
+          <!-- <i class="iconfont icon-fenxiang" style="font-size: 48rpx;" catchtap="shareTap" id="{{id}}"></i> -->
+        </view>
+        <!--评论-->
+        <view class="comment-input" wx:if="{{item.id == commentId && commentFlag}}" style="margin-bottom: -20rpx;">
+          <input type="text" value="{{msgInput}}" bindinput="bindMsgInput" focus="true"/>
+          <button type="primary" catchtap="sendMsg" id="{{item.id}}">发送</button>
+        </view>
+      </view>
+      <view class="space-bottom">呀~小主已经看完了啦~.~</view>
+    </view>
+  </view>
+</view>

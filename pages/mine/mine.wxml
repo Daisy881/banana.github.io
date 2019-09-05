@@ -41,7 +41,7 @@
           <i class="iconfont icon-shuxie"></i>写游记
         </view>
         <view class="three_tribe" bindtap="drafts">
-          <i class="iconfont icon-caogaoxiang"></i>收藏夹
+          <i class="iconfont icon-shoucang"></i>我喜欢
         </view>
       </view>
     </view>

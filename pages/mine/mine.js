@@ -75,12 +75,29 @@ Page({
     }
   },
   getUserInfo: function(e) {
-    console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  editMessage: function() {
+    wx.navigateTo({
+      url: '../mine-edit/mine-edit',
+    })
+  },
+  intoSpace: function() {
+    wx.navigateTo({
+      url: '../space/space'
+    })
+  },
+  editNotes: function() {
+    wx.navigateTo({
+      url: '../edit-nodes/edit-nodes'
+    })
+  },
+  drafts: function() {
+
   },
   // onShow() {
   //   const that = this
@@ -119,20 +136,6 @@ Page({
   //     })
   //   }
   // },
-  editMessage: function() {
-    wx.navigateTo({
-      url: '../mine-edit/mine-edit',
-    })
-  },
-  intoSpace: function() {
-    console.log("进入空间...")
-  },
-  editNotes: function() {
-
-  },
-  drafts: function() {
-
-  },
   // bindAccountInput: function(e) {
   //   this.setData({
   //     username: e.detail.value
