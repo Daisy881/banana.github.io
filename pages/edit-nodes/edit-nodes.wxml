@@ -1,0 +1,22 @@
+<view class="editnode-container">
+  <view class="editnode-tbox">
+    <textarea maxlength="-1" placeholder="写游记..." vlaue="{{textareaValue}}" bindinput="bindMsgText"></textarea>
+    <scroll-view scroll-y="false" style="height: 500rpx;">
+      <view class="picclass-box">
+        <block wx:for="{{tempFilePaths}}" wx:key="{{index}}">
+          <image src="{{item}}" bindtap="previewImage" data-index="{{index}}" class="none-img"/>
+        </block>
+        <view class="none-img" bindtap="upload">+</view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="editnode-bbox">
+    <view class="at-place" bindtap="getLocation">
+      <i class="iconfont icon-weizhi" style="font-size: 36rpx;"></i>
+      <text wx:if="{{selectedAddress}}">  {{selectedAddress}}</text>
+      <text wx:else>  所在位置</text>
+      <image src="/images/index/right-arrow.png" />
+    </view>
+    <button type="primary" bindtap="sendMsg">发布游记</button>
+  </view>
+</view>

@@ -1,0 +1,65 @@
+@import "/images/icons/iconfontTribe";
+.editnode-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.editnode-tbox {
+  width: 88%;
+  height: 600rpx;
+}
+.editnode-tbox textarea {
+  width: 100%;
+  height: 300rpx;
+  margin-top: 30rpx;
+}
+.picclass-box {
+  display: flex; 
+  flex-direction: row; 
+  flex-flow: wrap;
+}
+.none-img {
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: 10rpx;
+  margin-right: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e0e0e0;
+  font-size: 100rpx;
+  font-weight: 100;
+  border: 1px solid #cdcdcd;
+}
+
+.editnode-bbox {
+  width: 88%;
+  margin-top: 260rpx;
+}
+.at-place {
+  padding-bottom: 40rpx;
+  border-bottom: 1px solid #cdcdcd;
+}
+.at-place image {
+  width: 50rpx;
+  height: 50rpx;
+  position: fixed;
+  right: 35rpx;
+}
+.editnode-bbox button {
+  width: 93%;
+  border-radius: 60rpx;
+  background: #1296db;
+  position: fixed;
+  bottom: 50rpx;
+  left: 27rpx;
+}
+.editnode-bbox button:hover {
+  background: #1296db;
+}
+.editnode-bbox button:active {
+  background: #1296db;
+}

@@ -1,0 +1,23 @@
+@import "/templates/toast.wxss";
+.cicle {
+  width: 70rpx;
+  height: 70rpx;
+  position: fixed;
+  z-index: 100;
+}
+.mylocation-cantainer button {
+  width: 355rpx;
+  position: fixed;
+  bottom: 15rpx;
+  margin: auto 10rpx;
+  background: #1296db;
+}
+.mylocation-cantainer button:hover {
+  background: #1296db;
+}
+.mylocation-cantainer button:active {
+  background: #1296db;
+}
+button:nth-child(2) {
+  right: 0;
+}
