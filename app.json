@@ -1,8 +1,9 @@
 {
   "pages": [
-    "pages/mine/mine",
     "pages/index/index",
     "pages/square/square",
+    "pages/mine/mine",
+    "pages/favorite/favorite",
     "pages/logs/logs",
     "pages/space/space",
     "pages/mustgo/mustgo",

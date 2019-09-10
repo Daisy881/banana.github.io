@@ -1,0 +1,22 @@
+<import src="../../templates/square.wxml"/>
+
+<view class="favorite-container">
+  <view class="search-box">
+    <image src="/images/background/img1.jpg" class="background-box"/>
+    <p wx:if="{{inputFlag}}">
+      <input type="text" value="{{inputValue}}" placeholder="搜索用户名/位置" auto-focus="true" bindinput="bindMsgInput" bindblur="bindblur"/>
+      <button type="primary" catchtap="searchClick">搜索</button>
+    </p>
+    <p bindtap="changeInput" wx:else>
+      <image src="/images/index/serach-fav.png" class="searchfav-box"/>
+      <text style="color: #cdcdcd;position:fixed;top: 20rpx;left: 150rpx;">点我搜索啊~.~</text>
+    </p>
+    <image src="/images/background/img3.gif" class="gif-box"/>
+  </view>
+  <view style="margin-top: 120rpx;">
+    <view class="list_content" wx:for="{{favoriteList}}" wx:key="*this">
+      <template is="square" data="{{...item, idx, commentFlag}}"></template>
+    </view>
+  </view>
+  <view class="space-bottom">呀~小主已经刷到底了啦~.~</view>
+</view> 

@@ -74,9 +74,6 @@ Page({
       })
     }
   },
-  onShow(){
-    
-  },
   getUserInfo: function(e) {
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
@@ -100,7 +97,9 @@ Page({
     })
   },
   drafts: function() {
-
+    wx.navigateTo({
+      url: '../favorite/favorite'
+    })
   },
   // onShow() {
   //   const that = this

@@ -6,7 +6,7 @@
       <text class="data_time">{{dataTime}}</text>
     </view>
     <view class="article_content">{{articleContent}}</view>
-    <view style="display: flex; flex-direction: row; justify-content: space-around;">
+    <view class="picture-content">
       <block wx:for="{{picList}}" wx:key="*this">
         <image src="{{item}}" class="pic_video"/>
       </block>

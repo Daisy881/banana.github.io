@@ -1,6 +1,6 @@
 <view class="space-container" style="position: {{nodesListFlag? 'fixed':''}}">
   <view class="background-box" bindtap="changeBackPic">
-    <image src="/images/index/space.jpg" />
+    <image src="/images/background/img2.jpg" />
   </view>
   <view class="space-content">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
@@ -42,7 +42,7 @@
           <button type="primary" catchtap="sendMsg" id="{{item.id}}">发送</button>
         </view>
       </view>
-      <view class="space-bottom">呀~小主已经看完了啦~.~</view>
+      <view class="space-bottom">呀~小主已经刷到底了啦~.~</view>
     </view>
   </view>
 </view>

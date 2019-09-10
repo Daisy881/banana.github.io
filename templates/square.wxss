@@ -26,12 +26,20 @@
   font-size: 32rpx;
   margin-top: 30rpx;
   color: #7b7b7b;
+  margin-bottom: 20rpx;
+}
+.picture-content {
+  display: flex; 
+  flex-direction: row; 
+  justify-content: left;
+  flex-flow: wrap;
 }
 .pic_video {
-  width: 200rpx;
+  width: 205rpx;
   height: 220rpx;
-  margin-top: 20rpx;
+  margin-top: 5rpx;
   border-radius: 10rpx;
+  margin-right: 5rpx;
 }
 .s_place {
   font-size: 28rpx;
@@ -85,7 +93,7 @@
   font-size: 22rpx;
   padding: 0;
   position: absolute;
-  top: 628rpx;
+  top: 640rpx;
   right: 35rpx;
 }
 .comment-input button:hover {
