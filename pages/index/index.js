@@ -39,6 +39,10 @@ Page({
       detailsPic: '../../images/places/1.jpg',
       detailsName: '深圳湾公园',
       detailsPeople: '1987'
+    }, {
+      detailsPic: '../../images/places/1.jpg',
+      detailsName: '深圳湾公园',
+      detailsPeople: '1987'
     }],
     mountainsList: [{
       detailsPic: '../../images/places/1.jpg',

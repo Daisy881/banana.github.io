@@ -4,10 +4,12 @@
 <!-- 目的地和搜索框 -->
   <view class="destination_search">
     <view class="destination" bindtap="choosePlace">
-      深圳<view class="down_arrow"></view>
+      <text>深圳</text>
+      <view class="down_arrow"></view>
     </view>
     <view class="search" bindtap="searchTo">
-      <image src="../../images/index/search.jpg" class="search_img"></image>
+      <image src="/images/index/search-bef.png" />
+      <input type="text" placeholder="搜索目的地/景点/攻略" class="search_img"/>
     </view>
   </view>
 

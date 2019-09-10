@@ -5,25 +5,34 @@
   display: flex;
 }
 .destination {
-  margin-left: 30rpx;
-  margin-top: 15rpx;
+  margin-left: 38rpx;
+  margin-top: 29rpx;
 }
 .down_arrow {
   width: 0;
   height: 0;
   position: absolute;
   left: 110rpx;
-  top: 35rpx;
-  border-width: 20rpx;
+  top: 43rpx;
+  border-width: 18rpx;
   border-style: solid;
   border-color: #070707 transparent transparent transparent;
 }
+.search image {
+  width: 40rpx;
+  height: 40rpx;
+  position: relative;
+  left: 115rpx;
+  top: 30rpx;
+}
 .search_img {
-  width: 500rpx; 
+  width: 460rpx; 
   height: 60rpx; 
+  background-color: white;
   border-radius: 35rpx; 
+  padding-left: 80rpx;
   margin-left: 90rpx;
-  margin-top: 15rpx;
+  margin-top: -30rpx;
 }
  /* 导航栏  */
 .navbar {  

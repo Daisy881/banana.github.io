@@ -10,10 +10,19 @@
   align-items: center;
   flex-direction: column;
 }
+.search image {
+  width: 40rpx;
+  height: 40rpx;
+  position: relative;
+  left: -315rpx;
+  top: -45rpx;
+}
 .search_img {
-  width: 700rpx; 
+  width: 660rpx; 
   height: 70rpx; 
+  background-color: white;
   border-radius: 35rpx; 
+  padding-left: 100rpx;
   margin-top: -100rpx;
 }
 .square_nav {
