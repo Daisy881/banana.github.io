@@ -1,13 +1,13 @@
 {
   "pages": [
-    "pages/edit-nodes/edit-nodes",
+    "pages/mine/mine",
     "pages/index/index",
     "pages/square/square",
-    "pages/mine/mine",
     "pages/logs/logs",
     "pages/space/space",
     "pages/mustgo/mustgo",
     "pages/strategy/strategy",
+    "pages/edit-nodes/edit-nodes",
     "pages/getlocation/getlocation",
     "pages/mine-edit/mine-edit"
   ],

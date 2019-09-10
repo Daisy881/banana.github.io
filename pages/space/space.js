@@ -44,6 +44,7 @@ Page({
     }]
   },
   onLoad() {
+    wx.removeStorage({key: "nodeParams"})
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -155,4 +156,7 @@ Page({
       })
     }
   },
+  onUnload() {
+    wx.navigateBack()
+  }
 })

@@ -29,9 +29,9 @@
 }
 .space-user image {
   width: 170rpx;
-  height: 150rpx;
+  height: 170rpx;
   margin-right: 20rpx;
-  border-radius: 100rpx;
+  border-radius: 120rpx;
 }
 .space-user text {
   position: relative;

@@ -6,6 +6,7 @@ Page({
     txt: "",
     iconClass: "",
     toastFlag: true,
+    nodeParams: [],
     markers: [{
       iconPath: "/images/index/weizhi.png",
       id: 0,
@@ -26,17 +27,22 @@ Page({
     //   width: 2,
     //   dottedLine: true
     // }],
-    controls: [{
-      id: 1,
-      iconPath: '/images/index/weizhi.png',
-      position: {
-        left: 0,
-        top: 300 - 50,
-        width: 50,
-        height: 50
-      },
-      clickable: true
-    }]
+    // controls: [{
+    //   id: 1,
+    //   iconPath: '/images/index/weizhi.png',
+    //   position: {
+    //     left: 0,
+    //     top: 300 - 50,
+    //     width: 50,
+    //     height: 50
+    //   },
+    //   clickable: true
+    // }]
+  },
+  onLoad() { 
+    this.setData({
+      nodeParams: wx.getStorageSync("nodeParams")
+    })
   },
   onShow() {
     let that = this
@@ -100,8 +106,11 @@ Page({
         // 选择位置
         wx.chooseLocation({
           success: function (resp) {
+            let obj = Object()
+            obj.text = that.data.nodeParams
+            obj.address = resp.name
             wx.redirectTo({
-              url: "/pages/edit-nodes/edit-nodes?params=" + resp.name
+              url: "../edit-nodes/edit-nodes?objParams=" + JSON.stringify(obj)
             })
           },
         })

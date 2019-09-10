@@ -1,6 +1,6 @@
 <view class="editnode-container">
   <view class="editnode-tbox">
-    <textarea maxlength="-1" placeholder="写游记..." vlaue="{{textareaValue}}" bindinput="bindMsgText"></textarea>
+    <textarea maxlength="-1" placeholder="写游记..." value="{{textareaValue}}" bindinput="bindMsgText"></textarea>
     <scroll-view scroll-y="false" style="height: 500rpx;">
       <view class="picclass-box">
         <block wx:for="{{tempFilePaths}}" wx:key="{{index}}">

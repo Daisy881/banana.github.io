@@ -2,15 +2,32 @@ const app = getApp()
 
 Page({
   data: {
+    address: "",
     textareaValue: "",
     selectedAddress: "",
     tempFilePaths: []
   },
-  onLoad(option) {
-    if (option.params != undefined) {
+  onLoad(options) {
+    if (options.objParams != undefined) { // 选择位置 跳转回来的
       this.setData({
-        selectedAddress: option.params
+        address: JSON.parse(options.objParams).address,
+        textareaValue: JSON.parse(options.objParams).text[0],
+        selectedAddress: JSON.parse(options.objParams).address,
+        tempFilePaths: JSON.parse(JSON.parse(options.objParams).text[2])
       })
+    } else { // 正常进入的
+      var text = wx.getStorageSync("nodeParams") == undefined ? [] : wx.getStorageSync("nodeParams")
+      if (text.length > 0) {
+        this.setData({
+          textareaValue: text[0],
+          selectedAddress: text[1],
+          tempFilePaths: JSON.parse(text[2])
+        })
+        wx.setStorage({
+          key: "nodeParams",
+          data: []
+        })
+      }
     }
   },
   bindMsgText(e) {
@@ -87,12 +104,59 @@ Page({
       }
     })
   },
+  // 选择位置
   getLocation() {
-    wx.redirectTo({
+    let arr = []
+    arr.push(this.data.textareaValue, this.data.selectedAddress, JSON.stringify(this.data.tempFilePaths))
+    wx.setStorage({
+      key: "nodeParams",
+      data: arr
+    })
+    wx.navigateTo({
       url: '../getlocation/getlocation'
     })
   },
   sendMsg() {
-
+    if (this.data.textareaValue != '' || this.data.selectedAddress != '') {
+      wx.navigateTo({
+        url: '../space/space'
+      })
+      this.setData({
+        textareaValue: "",
+        selectedAddress: "",
+        tempFilePaths: []
+      })
+    } else {
+      wx.showToast({
+        title: "请写下游记哦~",
+        image: "/images/index/warning.png"
+      })
+    }
+  },
+  onUnload() {
+    const pages = getCurrentPages()
+    let prevPage = null //上一个页面
+    if (pages.length >= 2) {
+      prevPage = pages[pages.length - 2] //上一个页面
+    }
+    // 控制页面2级返回
+    if (prevPage.route == "pages/edit-nodes/edit-nodes") {
+      wx.navigateBack()
+      wx.setStorage({
+        key: "address",
+        data: this.data.address
+      })
+    }
+    if (this.data.textareaValue != '' || this.data.tempFilePaths.length > 0) {
+      let arr = []
+      arr.push(this.data.textareaValue, wx.getStorageSync("address"), JSON.stringify(this.data.tempFilePaths))
+      wx.setStorage({
+        key: "nodeParams",
+        data: arr
+      })
+      wx.showToast({
+        title: "游记已保存"
+      })
+    }
   }
 })

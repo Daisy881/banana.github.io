@@ -8,7 +8,7 @@
 .mylocation-cantainer button {
   width: 355rpx;
   position: fixed;
-  bottom: 15rpx;
+  bottom: 90rpx;
   margin: auto 10rpx;
   background: #1296db;
 }

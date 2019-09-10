@@ -52,5 +52,8 @@ App({
         isShow: false
       });
     }, 3000);
+  },
+  onHide() {
+    wx.clearStorageSync()
   }
 })

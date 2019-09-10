@@ -2,7 +2,7 @@
   
 <view class="mylocation-cantainer">
   <image src="/images/index/cicle.png" class="cicle" bindtap="backOrigin"/>
-  <map longitude="{{markers[0].longitude}}" latitude="{{markers[0].latitude}}" scale="12" bindcontroltap="controltap" markers="{{markers}}"  bindmarkertap="markertap" bindregionchange="regionchange" show-location style="width: 100%; height: 90%; position: fixed;" wx:if="{{toastFlag}}"></map>
+  <map longitude="{{markers[0].longitude}}" latitude="{{markers[0].latitude}}" scale="12" bindcontroltap="controltap" markers="{{markers}}"  bindmarkertap="markertap" bindregionchange="regionchange" show-location style="width: 100%; height: 80%; position: fixed;" wx:if="{{toastFlag}}"></map>
 
   <span wx:else>
     <template is="toast" data="{{txt, isShow, iconClass}}"></template>

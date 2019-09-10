@@ -72,7 +72,7 @@ form {
   width: 180rpx;
   height: 180rpx;
   margin-right: 20rpx;
-  border-radius: 40px;
+  border-radius: 50px;
 }
 .med_box {
   height: 650rpx;
