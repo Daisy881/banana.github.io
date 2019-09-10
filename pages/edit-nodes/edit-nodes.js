@@ -27,6 +27,10 @@ Page({
           key: "nodeParams",
           data: []
         })
+        wx.setStorage({
+          key: "address",
+          data: ""
+        })
       }
     }
   },
@@ -118,7 +122,7 @@ Page({
   },
   sendMsg() {
     if (this.data.textareaValue != '' || this.data.selectedAddress != '') {
-      wx.navigateTo({
+      wx.redirectTo({
         url: '../space/space'
       })
       this.setData({
@@ -126,6 +130,7 @@ Page({
         selectedAddress: "",
         tempFilePaths: []
       })
+      wx.clearStorageSync()
     } else {
       wx.showToast({
         title: "请写下游记哦~",
@@ -146,17 +151,18 @@ Page({
         key: "address",
         data: this.data.address
       })
-    }
-    if (this.data.textareaValue != '' || this.data.tempFilePaths.length > 0) {
-      let arr = []
-      arr.push(this.data.textareaValue, wx.getStorageSync("address"), JSON.stringify(this.data.tempFilePaths))
-      wx.setStorage({
-        key: "nodeParams",
-        data: arr
-      })
-      wx.showToast({
-        title: "游记已保存"
-      })
+    } else {
+      if (this.data.textareaValue != '' || this.data.tempFilePaths.length > 0) {
+        let arr = []
+        arr.push(this.data.textareaValue, wx.getStorageSync("address"), JSON.stringify(this.data.tempFilePaths))
+        wx.setStorage({
+          key: "nodeParams",
+          data: arr
+        })
+        wx.showToast({
+          title: "游记已保存"
+        })
+      }
     }
   }
 })
