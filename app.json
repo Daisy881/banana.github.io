@@ -5,6 +5,7 @@
     "pages/mine/mine",
     "pages/favorite/favorite",
     "pages/logs/logs",
+    "pages/address/address",
     "pages/space/space",
     "pages/mustgo/mustgo",
     "pages/strategy/strategy",

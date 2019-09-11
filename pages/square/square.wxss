@@ -14,11 +14,11 @@
   width: 40rpx;
   height: 40rpx;
   position: relative;
-  left: -315rpx;
-  top: -45rpx;
+  left: -295rpx;
+  top: -42rpx;
 }
 .search_img {
-  width: 660rpx; 
+  width: 605rpx; 
   height: 70rpx; 
   background-color: white;
   border-radius: 35rpx; 

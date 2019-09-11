@@ -4,6 +4,7 @@ const app = getApp()
 
 Page({
   data: {
+    city: "北京",
     navbar: ['必玩', '攻略'],
     currentTab: 0,
     navFlag: '0',
@@ -125,14 +126,21 @@ Page({
       strategysPeople: '1234'
     }]
   },
-  searchTo: function() {
+  onShow() {
+    if(wx.getStorageSync("city") != undefined && wx.getStorageSync("city")) {
+      this.setData({
+        city: wx.getStorageSync("city").replace("市", "")
+      })
+    }
+  },
+  searchTo: function () {
     wx.navigateTo({
       url: '../../pages/logs/logs',
     })
   },
-  choosePlace: function() {
+  choosePlace: function () {
     wx.navigateTo({
-      url: '../../pages/logs/logs',
+      url: '../../pages/address/address',
     })
   },
   // 导航切换监听
@@ -143,26 +151,30 @@ Page({
     })
   },
   // 分类监听
-  classifyTap: function(e) {
+  classifyTap: function (e) {
     this.setData({
       currentCsf: e.currentTarget.dataset.idx,
       classifyFlag: e.currentTarget.dataset.idx
     })
   },
-  goDetail: function(e) {
+  goDetail: function (e) {
     wx.navigateTo({
       url: '../mustgo/mustgo',
-      success: function(res) {
+      success: function (res) {
         // 通过eventChannel向被打开的页面传送数据
-        res.eventChannel.emit('acceptData', {data: e.currentTarget.dataset.idx})
-      } 
+        res.eventChannel.emit('acceptData', {
+          data: e.currentTarget.dataset.idx
+        })
+      }
     })
   },
-  strDetail: function(e) {
+  strDetail: function (e) {
     wx.navigateTo({
       url: '../strategy/strategy',
-      success: function(res) {
-        res.eventChannel.emit('acceptStrData', {data: e.currentTarget.dataset.idx})
+      success: function (res) {
+        res.eventChannel.emit('acceptStrData', {
+          data: e.currentTarget.dataset.idx
+        })
       }
     })
   }

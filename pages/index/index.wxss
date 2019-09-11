@@ -1,3 +1,5 @@
+@import "/images/icons/tip.wxss";
+
 .destination_search {
   width: 100%;
   height: 200rpx;
@@ -5,33 +7,42 @@
   display: flex;
 }
 .destination {
+  width: 170rpx;
   margin-left: 38rpx;
-  margin-top: 29rpx;
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
-.down_arrow {
+.destination text {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* .down_arrow {
   width: 0;
   height: 0;
-  position: absolute;
-  left: 110rpx;
-  top: 43rpx;
+  position: relative;
+  left: 160rpx;
+  top: -65rpx;
   border-width: 18rpx;
   border-style: solid;
   border-color: #070707 transparent transparent transparent;
-}
+} */
 .search image {
   width: 40rpx;
   height: 40rpx;
   position: relative;
-  left: 115rpx;
+  left: 35rpx;
   top: 30rpx;
 }
 .search_img {
-  width: 460rpx; 
+  width: 420rpx; 
   height: 60rpx; 
   background-color: white;
   border-radius: 35rpx; 
   padding-left: 80rpx;
-  margin-left: 90rpx;
   margin-top: -30rpx;
 }
  /* 导航栏  */
