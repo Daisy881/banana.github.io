@@ -101,6 +101,17 @@ Page({
       url: '../favorite/favorite'
     })
   },
+  goDetail: function (e) {
+    wx.navigateTo({
+      url: '../mustgo/mustgo',
+      success: function (res) {
+        // 通过eventChannel向被打开的页面传送数据
+        res.eventChannel.emit('acceptData', {
+          data: e.currentTarget.dataset.idx
+        })
+      }
+    })
+  },
   // onShow() {
   //   const that = this
   //   const username = wx.getStorageSync("username")

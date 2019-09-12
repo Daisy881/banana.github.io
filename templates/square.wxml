@@ -7,9 +7,9 @@
     </view>
     <view class="article_content">{{articleContent}}</view>
     <view class="picture-content">
-      <block wx:for="{{picList}}" wx:key="*this">
+      <view wx:for="{{picList}}" wx:key="*this" data-idx="{{index}}" data-list="{{picList}}" bindtap="prePic">
         <image src="{{item}}" class="pic_video"/>
-      </block>
+      </view>
     </view>
     <text class="{{place ? 's_place' : ''}}" >{{place}}</text>
     <view class="s_place" style="float: right; background: white;" wx:if="{{distance}}">

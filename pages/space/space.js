@@ -116,11 +116,7 @@ Page({
     })
   },
   getImg(e) {
-    var current = e.currentTarget.dataset.idx
-		wx.previewImage({
-      current: e.currentTarget.dataset.list[current], // 当前显示图片的http链接
-      urls: e.currentTarget.dataset.list // 需要预览的图片http链接列表
-		})
+    app.previewPic(e)
   },
   // 喜欢
   praiseTap: function(e) {

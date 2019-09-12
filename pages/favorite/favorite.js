@@ -53,6 +53,9 @@ Page({
       })
     }, 500)
   },
+  prePic(e) {
+    app.previewPic(e)
+  },
   // 喜欢
   praiseTap: function(e) {
     let that = this

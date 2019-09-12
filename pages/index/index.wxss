@@ -21,16 +21,6 @@
   text-overflow: ellipsis;
   margin-right: 5rpx;
 }
-/* .down_arrow {
-  width: 0;
-  height: 0;
-  position: relative;
-  left: 160rpx;
-  top: -65rpx;
-  border-width: 18rpx;
-  border-style: solid;
-  border-color: #070707 transparent transparent transparent;
-} */
 .search image {
   width: 40rpx;
   height: 40rpx;

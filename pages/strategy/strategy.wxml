@@ -16,7 +16,7 @@
     <view class="user_box">
       <image src="{{strategyList.userHead}}" />
       <text class="str_name">{{strategyList.username}}</text>
-      <i class="iconfont icon-weizhi" style="font-size: 34rpx;margin-right: -130rpx; margin-top: 15rpx;"></i>
+      <i class="iconfont icon-weizhi" style="font-size: 34rpx;margin-right: -130rpx; margin-top: 5rpx;"></i>
       <text>{{strategyList.place}}<text class="arrow_right"></text></text>
     </view>
     <view style="font-size: 38rpx;">

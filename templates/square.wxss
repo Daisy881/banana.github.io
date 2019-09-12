@@ -74,7 +74,7 @@
 }
 .comment-input {
   width: 100%;
-  margin-bottom: 20rpx; 
+  margin-bottom: -40rpx; 
 }
 .comment-input input {
   width: 84%;
@@ -82,7 +82,7 @@
   line-height: 20rpx;
   position: relative;
   top: -10rpx;
-  padding: auto 20rpx;
+  padding-left: 10rpx;
   border-radius: 10rpx;
   border: 1px solid #cdcdcd;
 }
@@ -92,9 +92,9 @@
   height: 54rpx;
   font-size: 22rpx;
   padding: 0;
-  position: absolute;
-  top: 640rpx;
-  right: 35rpx;
+  position: relative;
+  top: -66rpx;
+  right: -265rpx;
 }
 .comment-input button:hover {
   background: #1296db;

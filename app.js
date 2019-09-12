@@ -53,7 +53,12 @@ App({
       });
     }, 3000);
   },
-  onHide() {
-    wx.clearStorageSync()
+  // 预览图片
+  previewPic(e) {
+    var current = e.currentTarget.dataset.idx
+		wx.previewImage({
+      current: e.currentTarget.dataset.list[current], // 当前显示图片的http链接
+      urls: e.currentTarget.dataset.list // 需要预览的图片http链接列表
+		})
   }
 })

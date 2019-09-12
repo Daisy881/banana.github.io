@@ -10,22 +10,22 @@ Page({
     commentFlag: false,
     squareList: [{
       id: 0,
-      userhead: '../../images/places/1.jpg',
+      userhead: 'http://i0.hdslb.com/bfs/article/12f6ff92c25256515be6c1cc0d6d0766743bedd6.jpg',
       username: '风萧萧啊',
       dataTime: '2019-07-01',
       articleContent: '航拍中国最美的丹霞地貌，到处五颜六色，仿佛童话世界',
-      picList: ['../../images/places/1.jpg', '../../images/places/1.jpg', '../../images/places/1.jpg', '../../images/places/1.jpg'],
+      picList: ['http://i0.hdslb.com/bfs/article/12f6ff92c25256515be6c1cc0d6d0766743bedd6.jpg', 'http://i0.hdslb.com/bfs/article/12f6ff92c25256515be6c1cc0d6d0766743bedd6.jpg', 'http://i0.hdslb.com/bfs/article/12f6ff92c25256515be6c1cc0d6d0766743bedd6.jpg', 'http://i0.hdslb.com/bfs/article/12f6ff92c25256515be6c1cc0d6d0766743bedd6.jpg'],
       place: '南北公园',
       praise: '18',
       comment: '38',
       share: ''
     }, {
       id: 1,
-      userhead: '../../images/places/1.jpg',
+      userhead: 'http://i0.hdslb.com/bfs/article/12f6ff92c25256515be6c1cc0d6d0766743bedd6.jpg',
       username: '风萧萧啊',
       dataTime: '2019-07-01',
       articleContent: '航拍中国最美的丹霞地貌，到处五颜六色，仿佛童话世界',
-      picList: ['../../images/places/1.jpg', '../../images/places/1.jpg', '../../images/places/1.jpg'],
+      picList: ['http://i0.hdslb.com/bfs/article/12f6ff92c25256515be6c1cc0d6d0766743bedd6.jpg', 'http://i0.hdslb.com/bfs/article/12f6ff92c25256515be6c1cc0d6d0766743bedd6.jpg', 'http://i0.hdslb.com/bfs/article/12f6ff92c25256515be6c1cc0d6d0766743bedd6.jpg'],
       place: '丹霞山',
       praise: '23',
       comment: '98',
@@ -33,22 +33,22 @@ Page({
     }],
     nearbyList: [{
       id: 0,
-      userhead: '../../images/places/2.jpg',
+      userhead: 'http://gss0.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/lvpics/w=600/sign=1350023d79899e51788e391472a5d990/b21bb051f819861810d03e4448ed2e738ad4e65f.jpg',
       username: '风萧萧啊',
       dataTime: '2019-07-01',
       articleContent: '航拍中国最美的丹霞地貌，到处五颜六色，仿佛童话世界',
-      picList: ['../../images/places/2.jpg', '../../images/places/2.jpg', '../../images/places/2.jpg'],
+      picList: ['http://gss0.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/lvpics/w=600/sign=1350023d79899e51788e391472a5d990/b21bb051f819861810d03e4448ed2e738ad4e65f.jpg', 'http://gss0.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/lvpics/w=600/sign=1350023d79899e51788e391472a5d990/b21bb051f819861810d03e4448ed2e738ad4e65f.jpg', 'http://gss0.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/lvpics/w=600/sign=1350023d79899e51788e391472a5d990/b21bb051f819861810d03e4448ed2e738ad4e65f.jpg'],
       distance: '12.7',
       praise: '23',
       comment: '98',
       share: ''
     }, {
       id: 1,
-      userhead: '../../images/places/1.jpg',
+      userhead: 'http://i0.hdslb.com/bfs/article/12f6ff92c25256515be6c1cc0d6d0766743bedd6.jpg',
       username: '风萧萧啊',
       dataTime: '2019-07-01',
       articleContent: '航拍中国最美的丹霞地貌，到处五颜六色，仿佛童话世界',
-      picList: ['../../images/places/1.jpg', '../../images/places/1.jpg', '../../images/places/1.jpg'],
+      picList: ['http://i0.hdslb.com/bfs/article/12f6ff92c25256515be6c1cc0d6d0766743bedd6.jpg', 'http://i0.hdslb.com/bfs/article/12f6ff92c25256515be6c1cc0d6d0766743bedd6.jpg', 'http://i0.hdslb.com/bfs/article/12f6ff92c25256515be6c1cc0d6d0766743bedd6.jpg'],
       place: '丹霞山',
       distance: '129.9',
       praise: '23',
@@ -56,27 +56,32 @@ Page({
       share: ''
     }, {
       id: 2,
-      userhead: '../../images/places/1.jpg',
+      userhead: 'http://i0.hdslb.com/bfs/article/12f6ff92c25256515be6c1cc0d6d0766743bedd6.jpg',
       username: '风萧萧啊',
       dataTime: '2019-07-01',
       articleContent: '航拍中国最美的丹霞地貌，到处五颜六色，仿佛童话世界',
-      picList: ['../../images/places/1.jpg', '../../images/places/1.jpg', '../../images/places/1.jpg'],
+      picList: ['http://i0.hdslb.com/bfs/article/12f6ff92c25256515be6c1cc0d6d0766743bedd6.jpg', 'http://i0.hdslb.com/bfs/article/12f6ff92c25256515be6c1cc0d6d0766743bedd6.jpg', 'http://i0.hdslb.com/bfs/article/12f6ff92c25256515be6c1cc0d6d0766743bedd6.jpg'],
       place: '南北公园',
       praise: '23',
       comment: '98',
       share: ''
     }, {
       id: 3,
-      userhead: '../../images/places/1.jpg',
+      userhead: 'http://i0.hdslb.com/bfs/article/12f6ff92c25256515be6c1cc0d6d0766743bedd6.jpg',
       username: '风萧萧啊',
       dataTime: '2019-07-01',
       articleContent: '航拍中国最美的丹霞地貌，到处五颜六色，仿佛童话世界',
-      picList: ['../../images/places/1.jpg', '../../images/places/1.jpg', '../../images/places/1.jpg'],
+      picList: ['http://i0.hdslb.com/bfs/article/12f6ff92c25256515be6c1cc0d6d0766743bedd6.jpg', 'http://i0.hdslb.com/bfs/article/12f6ff92c25256515be6c1cc0d6d0766743bedd6.jpg', 'http://i0.hdslb.com/bfs/article/12f6ff92c25256515be6c1cc0d6d0766743bedd6.jpg'],
       distance: '2.8',
       praise: '23',
       comment: '98',
       share: ''
     }]
+  },
+  onShow() {
+    this.setData({
+      commentFlag: false
+    })
   },
   searchTo() {
     wx.navigateTo({
@@ -89,6 +94,10 @@ Page({
       currentTab: e.currentTarget.dataset.idx,
       squareFlag: e.currentTarget.dataset.idx
     })
+  },
+  // 预览图片
+  prePic(e) {
+    app.previewPic(e)
   },
   // 喜欢
   praiseTap: function(e) {

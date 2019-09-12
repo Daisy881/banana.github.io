@@ -113,7 +113,7 @@
 .font_introduce {
   width: 500rpx;
   position: relative;
-  top: -52rpx;
+  top: -56rpx;
   left: 200rpx;
 }
 .xiaozhu_comment {
