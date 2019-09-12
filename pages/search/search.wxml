@@ -1,0 +1,20 @@
+<view class="search-container">
+  <view class="search-input">
+    <view class="search">
+      <image src="/images/index/search-bef.png" />
+      <input type="text" placeholder="搜索目的地/景点/攻略" bindinput="bindMsgInput" confirm-type="search" bindconfirm="bindconfirm" focus="true" value="{{inputMsg}}" class="search_img"/>
+      <view class="cancel" bindtap="cancelSearch">取消</view>
+    </view>
+    <view class="search-bottombox" wx:if="{{historyFlag}}">
+      <view class="history-header">
+        <text>历史记录</text>
+        <i class="iconfont icon-shanchu" bindtap="doDelete"></i>
+      </view>
+      <view class="history-content">
+        <p wx:for="{{historyList}}" wx:key="index" data-idx="{{index}}" catchtap="bindHistory">
+          <p>{{item}}</p>
+        </p>
+      </view>
+    </view>
+  </view>
+</view>

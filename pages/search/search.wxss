@@ -1,0 +1,65 @@
+@import "/images/icons/tip.wxss";
+
+.search-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+.search-input {
+  width: 92%;
+  height: 100%;
+}
+.search {
+  margin-top: 70rpx;
+  margin-left: -30rpx;
+  display: flex;
+  flex-flow: row;
+}
+.search image {
+  width: 30rpx;
+  height: 30rpx;
+  position: relative;
+  left: 65rpx;
+  top: -15rpx;
+}
+.search_img {
+  width: 510rpx; 
+  height: 60rpx; 
+  font-size: 28rpx;
+  background-color: #f0f0f0;
+  border-radius: 35rpx; 
+  padding-left: 85rpx;
+  margin-top: -30rpx;
+}
+.cancel {
+  width: 65rpx;
+  height: 65rpx;
+  color: #7c7c7c;
+  margin-left: 25rpx;
+  margin-top: -23rpx;
+}
+.history-header {
+  margin-top: 60rpx;
+  margin-bottom: 20rpx;
+  font-size: 30rpx;
+  font-weight: bolder;
+  letter-spacing: 3rpx;
+}
+.history-header i {
+  position: relative;
+  left: 520rpx;
+}
+.history-content {
+  display: flex;
+  flex-flow: row wrap;
+}
+.history-content p {
+  background-color: #f0f0f0;
+  border-radius: 10rpx;
+  padding: 15rpx;
+  margin-right: 10rpx;
+  margin-top: 10rpx;
+}

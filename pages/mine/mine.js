@@ -92,7 +92,7 @@ Page({
     })
   },
   editNotes: function() {
-    wx.navigateTo({
+    wx.reLaunch({
       url: '../edit-nodes/edit-nodes'
     })
   },

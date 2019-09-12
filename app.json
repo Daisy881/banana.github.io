@@ -4,6 +4,7 @@
     "pages/square/square",
     "pages/mine/mine",
     "pages/favorite/favorite",
+    "pages/search/search",
     "pages/logs/logs",
     "pages/address/address",
     "pages/space/space",

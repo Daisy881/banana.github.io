@@ -1,4 +1,8 @@
 <view class="editnode-container">
+  <view class="button-class">
+    <button type="text" bindtap="cancelMsg">取消</button>
+    <button type="primary" bindtap="sendMsg">发布</button>
+  </view>
   <view class="editnode-tbox">
     <textarea maxlength="-1" placeholder="写游记..." value="{{textareaValue}}" bindinput="bindMsgText"></textarea>
     <scroll-view scroll-y="false" style="height: 500rpx;">
@@ -17,6 +21,5 @@
       <text wx:else>  所在位置</text>
       <image src="/images/index/right-arrow.png" />
     </view>
-    <button type="primary" bindtap="sendMsg">发布游记</button>
   </view>
 </view>

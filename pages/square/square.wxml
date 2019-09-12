@@ -2,9 +2,11 @@
 
 <view class="container">
   <!-- 搜索框 -->
-  <view class="search" bindtap="searchTo">
-    <image src="/images/index/search-bef.png" />
-    <input type="text" placeholder="搜索目的地/景点/攻略" disabled="disabled" class="search_img"/>
+  <view class="search">
+    <p bindtap="searchTo">
+      <image src="/images/index/search-bef.png" />
+      <input type="text" placeholder="搜索目的地/景点/攻略" disabled="disabled" class="search_img"/>
+    </p>
     <view class="square_nav">
       <text class="item {{currentTab == index ? 'active' : ''}}" wx:for="{{squareNav}}" wx:key="*this" data-idx="{{index}}" bindtap="squareTap">{{item}}</text>
     </view>

@@ -135,7 +135,7 @@ Page({
   },
   searchTo: function () {
     wx.navigateTo({
-      url: '../../pages/logs/logs',
+      url: '../../pages/search/search',
     })
   },
   choosePlace: function () {

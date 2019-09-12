@@ -104,6 +104,10 @@ Page({
       success: function (res) {
         var city = res.data.result.addressComponent.city
         page.setData({ city: city })
+        wx.setStorage({
+          key: "city",
+          data: city
+        })
       },
       fail: function () {
         page.setData({ city: "获取定位失败" });

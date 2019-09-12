@@ -2,7 +2,6 @@ const app = getApp()
 
 Page({
   data: {
-    address: "",
     textareaValue: "",
     selectedAddress: "",
     tempFilePaths: []
@@ -10,7 +9,6 @@ Page({
   onLoad(options) {
     if (options.objParams != undefined) { // 选择位置 跳转回来的
       this.setData({
-        address: JSON.parse(options.objParams).address,
         textareaValue: JSON.parse(options.objParams).text[0],
         selectedAddress: JSON.parse(options.objParams).address,
         tempFilePaths: JSON.parse(JSON.parse(options.objParams).text[2])
@@ -26,10 +24,6 @@ Page({
         wx.setStorage({
           key: "nodeParams",
           data: []
-        })
-        wx.setStorage({
-          key: "address",
-          data: ""
         })
       }
     }
@@ -95,8 +89,8 @@ Page({
   },
   // 预览图片
   previewImage: function (e) {
-    let index = e.target.dataset.index;//预览图片的编号
-    let that = this;
+    let index = e.target.dataset.index//预览图片的编号
+    let that = this
     wx.previewImage({
       current: that.data.tempFilePaths[index],//预览图片链接
       urls: that.data.tempFilePaths,//图片预览list列表
@@ -120,9 +114,10 @@ Page({
       url: '../getlocation/getlocation'
     })
   },
+  // 发送游记
   sendMsg() {
-    if (this.data.textareaValue != '' || this.data.selectedAddress != '') {
-      wx.redirectTo({
+    if (this.data.textareaValue != '' || this.data.tempFilePaths.length > 0) {
+      wx.navigateTo({
         url: '../space/space'
       })
       this.setData({
@@ -130,7 +125,6 @@ Page({
         selectedAddress: "",
         tempFilePaths: []
       })
-      wx.clearStorageSync()
     } else {
       wx.showToast({
         title: "请写下游记哦~",
@@ -138,31 +132,30 @@ Page({
       })
     }
   },
-  onUnload() {
-    const pages = getCurrentPages()
-    let prevPage = null //上一个页面
-    if (pages.length >= 2) {
-      prevPage = pages[pages.length - 2] //上一个页面
-    }
-    // 控制页面2级返回
-    if (prevPage.route == "pages/edit-nodes/edit-nodes") {
-      wx.navigateBack()
-      wx.setStorage({
-        key: "address",
-        data: this.data.address
+  cancelMsg() {
+    if (this.data.textareaValue != '' || this.data.tempFilePaths.length > 0) {
+      let that = this
+      wx.showModal({
+        title: "提示",
+        content: "是否保留此次编辑内容？",
+        success(res) {
+          if (!res.cancel) {
+            let arr = []
+            arr.push(that.data.textareaValue, that.data.selectedAddress, JSON.stringify(that.data.tempFilePaths))
+            wx.setStorage({
+              key: "nodeParams",
+              data: arr
+            })
+          }
+          wx.switchTab({
+            url: "/pages/mine/mine"
+          })
+        }
       })
     } else {
-      if (this.data.textareaValue != '' || this.data.tempFilePaths.length > 0) {
-        let arr = []
-        arr.push(this.data.textareaValue, wx.getStorageSync("address"), JSON.stringify(this.data.tempFilePaths))
-        wx.setStorage({
-          key: "nodeParams",
-          data: arr
-        })
-        wx.showToast({
-          title: "游记已保存"
-        })
-      }
+      wx.switchTab({
+        url: "/pages/mine/mine"
+      })
     }
   }
 })

@@ -157,6 +157,8 @@ Page({
     }
   },
   onUnload() {
-    wx.navigateBack()
+    wx.switchTab({
+      url: "/pages/mine/mine"
+    })
   }
 })

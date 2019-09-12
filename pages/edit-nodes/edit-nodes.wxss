@@ -9,6 +9,22 @@
   align-items: center;
   flex-direction: column;
 }
+.button-class {
+  display: flex;
+  flex-flow: row;
+  margin-top: 20rpx;
+}
+.button-class button {
+  width: 120rpx;
+  height: 55rpx;
+  font-size: 30rpx;
+  line-height: 55rpx;
+  margin-right: 5rpx;
+}
+.button-class button:nth-child(2) {
+  margin-left: 415rpx;
+  background: #1296db;
+}
 .editnode-tbox {
   width: 88%;
   height: 600rpx;
@@ -52,14 +68,6 @@
   height: 50rpx;
   position: fixed;
   right: 35rpx;
-}
-.editnode-bbox button {
-  width: 93%;
-  border-radius: 60rpx;
-  background: #1296db;
-  position: fixed;
-  bottom: 80rpx;
-  left: 27rpx;
 }
 .editnode-bbox button:hover {
   background: #1296db;

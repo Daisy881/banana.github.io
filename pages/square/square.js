@@ -78,6 +78,11 @@ Page({
       share: ''
     }]
   },
+  searchTo() {
+    wx.navigateTo({
+      url: "../../pages/search/search"
+    })
+  },
   // 监听导航
   squareTap: function(e) {
     this.setData({
